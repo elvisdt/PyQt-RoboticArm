@@ -705,7 +705,7 @@ Pane {
 
     Label {
         id: robotStatus
-        text: "Qt for Python RobotArm Ready for arduino control" //backend.status
+        text: "Qt for Python RobotArm Control" //backend.status
         anchors.top: parent.top
         font.italic: true
         font.pointSize : 16
