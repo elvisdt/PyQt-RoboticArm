@@ -78,23 +78,25 @@ Node {
         scale.z: 1
         source: "meshes/base_01.mesh"
         // eulerRotation.x: -90
-        // eulerRotation.y: -90
+        eulerRotation.y: 180
         // eulerRotation.z: -90
         materials: [steel_material, plastic_material]
 
         Model {
             id: root
             // y: -5.96047e-08
-            x: 150
-            y:200
-            eulerRotation.y: rotation1
+            x: 0
+            y: 200
+            z: 0
+            eulerRotation.y: 180
+
             source: "meshes/brazo_01.mesh"
             materials: [plastic_material, plastic_color_material, steel_material]
             
 
             Model {
                 id: forearm
-                x: 5.32907e-15
+                x: 6
                 y: 150
                 z: 1.53472
                 eulerRotation.x: rotation2

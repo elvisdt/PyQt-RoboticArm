@@ -73,11 +73,11 @@ Node {
 
     Model {
         id: base
-        scale.x: 1
-        scale.y: 1
-        scale.z: 1
-        source: "meshes/base_01.mesh"
-        // eulerRotation.x: -90
+        scale.x: 100
+        scale.y: 100
+        scale.z: 100
+        source: "meshes/base.mesh"
+        eulerRotation.x: -90
         // eulerRotation.y: -90
         // eulerRotation.z: -90
         materials: [steel_material, plastic_material]
