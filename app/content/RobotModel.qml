@@ -22,13 +22,6 @@ Node {
         // objectName: "cuter_scara.obj"
         
         Model {
-            id: base_s1
-            objectName: "base_s1"
-            source: "meshes/base_s1_mesh.mesh"
-            
-            materials: [node255_0_0_material]
-        }
-        Model {
             id: base_p1
             objectName: "base_p1"
             source: "meshes/base_p1_mesh.mesh"
@@ -43,7 +36,7 @@ Node {
             objectName: "base_b1"
             source: "meshes/base_b1_mesh.mesh"
             materials: [
-                steel___Satin_material
+                _steel_Satin_material
             ]
         }
         Model {
@@ -60,7 +53,7 @@ Node {
             objectName: "base_b21"
             source: "meshes/base_b21_mesh.mesh"
             materials: [
-                steel___Satin_material
+                _steel_Satin_material
             ]
         }
         Model {
@@ -73,38 +66,45 @@ Node {
             ]
         }
 
-        // Brazos
+        //---------------------------------------//
         Model {
-            id: brazo_01
-            objectName: "brazo_01"
-            source: "meshes/brazo_01_mesh.mesh"
-            // eulerRotation.y: rotation1
-            position.y: movement1
+            id: base_s1
+            objectName: "base_s1"
+            source: "meshes/base_s1_mesh.mesh"
+            materials: [node255_0_0_material]
             eulerRotation.y: rotation1 
-            materials: [
-                node68_68_68_material,
-                node229_234_237_material,
-                node68_68_68_material,
-                node229_234_237_material
-            ]
-
+                    // Brazos
             Model {
-                id: brazo_02
-                objectName: "brazo_02"
-                source: "meshes/brazo_02_mesh.mesh"
-                eulerRotation.y: rotation2
+                id: brazo_01
+                objectName: "brazo_01"
+                source: "meshes/brazo_01_mesh.mesh"
+                // eulerRotation.y: rotation1
+                position.y: movement1
                 materials: [
                     node68_68_68_material,
-                    node255_255_255_material,
+                    node229_234_237_material,
                     node68_68_68_material,
-                    node255_255_255_material,
-                    node68_68_68_material,
-                    node255_255_255_material,
-                    node68_68_68_material
+                    node229_234_237_material
                 ]
+
+                Model {
+                    id: brazo_02
+                    objectName: "brazo_02"
+                    source: "meshes/brazo_02_mesh.mesh"
+                    eulerRotation.y: rotation2
+                    materials: [
+                        node68_68_68_material,
+                        node255_255_255_material,
+                        node68_68_68_material,
+                        node255_255_255_material,
+                        node68_68_68_material,
+                        node255_255_255_material,
+                        node68_68_68_material
+                    ]
+                }
             }
+
         }
-        
     }
 
 
@@ -125,7 +125,7 @@ Node {
             indexOfRefraction: 1
         }
         PrincipledMaterial {
-            id: steel___Satin_material
+            id: _steel_Satin_material
             objectName: "Steel_-_Satin"
             indexOfRefraction: 1
         }
