@@ -69,14 +69,70 @@ Node {
     readonly property alias forearm_position: forearm.scenePosition
     readonly property alias root_position: root.scenePosition
 
-  
+    // Resources
+       // Resources
+    PrincipledMaterial {
+        id: node255_0_0_material
+        objectName: "255,0,0"
+        baseColor: "#ffff0000"
+        indexOfRefraction: 1
+    }
+    PrincipledMaterial {
+        id: node68_68_68_material
+        objectName: "68,68,68"
+        baseColor: "#ff444444"
+        indexOfRefraction: 1
+    }
+    PrincipledMaterial {
+        id: steel___Satin_material
+        objectName: "Steel_-_Satin"
+        indexOfRefraction: 1
+    }
+    PrincipledMaterial {
+        id: node255_255_255_material
+        objectName: "255,255,255"
+        indexOfRefraction: 1
+    }
+    PrincipledMaterial {
+        id: node0_255_0_material
+        objectName: "0,255,0"
+        baseColor: "#ff00ff00"
+        indexOfRefraction: 1
+    }
+    PrincipledMaterial {
+        id: node229_234_237_material
+        objectName: "229,234,237"
+        baseColor: "#ffe5eaed"
+        indexOfRefraction: 1
+    }
 
     Model {
+            id: base_s1
+            objectName: "base_s1"
+            source: "meshes/base_s1_mesh.mesh"
+            materials: [
+                node255_0_0_material
+            ]
+        }
+
+    Model {
+            id: base_p1
+            objectName: "base_p1"
+            source: "meshes/base_p1_mesh.mesh"
+            materials: [
+                node68_68_68_material,
+                node255_0_0_material,
+                node68_68_68_material
+            ]
+        }
+
+        
+    Model {
         id: base
-        scale.x: 1
-        scale.y: 1
-        scale.z: 1
-        source: "meshes/base_01.mesh"
+        scale.x: 0.5
+        scale.y: 0.5
+        scale.z: 0.5
+        source: "cutter/meshes/base_p1_mesh.mesh"
         // eulerRotation.x: -90
         eulerRotation.y: 180
         // eulerRotation.z: -90
@@ -85,22 +141,24 @@ Node {
         Model {
             id: root
             // y: -5.96047e-08
-            x: 0
-            y: 200
-            z: 0
-            eulerRotation.y: 180
+            // y: -5.96047e-08
+            // z: 1.0472
+            // scale.x: 0.5
+            // scale.y: 0.5
+            // scale.z: 0.5
+            eulerRotation.y: rotation1
 
-            source: "meshes/brazo_01.mesh"
+            source: "cutter/meshes/brazo_01_mesh.mesh"
             materials: [plastic_material, plastic_color_material, steel_material]
             
 
             Model {
                 id: forearm
-                x: 6
-                y: 150
-                z: 1.53472
-                eulerRotation.x: rotation2
-                source: "meshes/brazo_02.mesh"
+                // x: 0
+                // y: 0
+                // z: 1.0
+                eulerRotation.z: 0
+                source: "cutter/meshes/brazo_02_mesh.mesh"
                 materials: [plastic_material, steel_material]
 
                 Model {
