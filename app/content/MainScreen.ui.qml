@@ -551,7 +551,7 @@ Pane {
 
 				Behavior on rotation2 {
 					SmoothedAnimation {
-						velocity: 80
+						velocity: 60
 					}
 				}
 
