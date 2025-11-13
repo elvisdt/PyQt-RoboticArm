@@ -21,6 +21,9 @@ Node {
         id: base_goup
         // objectName: "cuter_scara.obj"
         
+        scale.x: 0.5
+        scale.y: 0.5
+        scale.z: 0.5
         Model {
             id: base_p1
             objectName: "base_p1"
@@ -92,6 +95,13 @@ Node {
                     objectName: "brazo_02"
                     source: "meshes/brazo_02_mesh.mesh"
                     eulerRotation.y: rotation2
+
+                    
+                    // pivot.x: 50    // Cambia el eje de rotación en X
+                    // pivot.y: 0     // Cambia el eje de rotación en Y
+                    // pivot.z: 0     // Cambia el eje de rotación en Z
+
+
                     materials: [
                         node68_68_68_material,
                         node255_255_255_material,
