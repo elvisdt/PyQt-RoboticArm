@@ -12,7 +12,7 @@ Window {
     minimumHeight: 600
 
     visible: true
-    title: "RobotCutter"
+    title: "Robot3DOF"
 
     MainScreen {
         anchors.fill: parent
